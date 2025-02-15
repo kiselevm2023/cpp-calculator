@@ -59,7 +59,12 @@ void MainWindow::on_btn_res_clicked()
 
 void MainWindow::on_btn_0_clicked()
 {
-    ProcessNumber(0);
+    if (input_number_.isEmpty()) {
+        input_number_ = "0";
+        ui->l_result->setText(input_number_);
+    } else {
+        ProcessNumber(0);
+    }
 }
 
 void MainWindow::on_btn_1_clicked()
@@ -155,20 +160,23 @@ void MainWindow::on_btn_del_clicked()
 {
     if (!input_number_.isEmpty())  {
         input_number_ = input_number_.left(input_number_.length() - 1);
-        active_number_ = input_number_.toDouble();
-        ui->l_result->setText(input_number_);
+        if (input_number_.isEmpty() || input_number_ == "-") {
+            active_number_ = 0;
+            ui->l_result->setText("0");
+            input_number_ = "";
+        }
+        else {
+            active_number_ = input_number_.toDouble();
+            ui->l_result->setText(input_number_);
+        }
     }
 }
 
 void MainWindow::on_btn_dot_clicked()
 {
     if (input_number_.isEmpty()) {
-        if (current_operation_ != Operation::NO_OPERATION) {
-            return;
-        }
         input_number_ = "0";
-        ui->l_result->setText(input_number_);
-        ui->l_formula->setText("");
+        ui->l_result->setText(input_number_ + kDot);
     }
 
     if (!input_number_.contains(kDot)) {
@@ -178,8 +186,12 @@ void MainWindow::on_btn_dot_clicked()
 }
 
 void MainWindow::ProcessNumber(Number n) {
-    if (current_operation_ == Operation::NO_OPERATION) {
-        ui->l_formula->setText("");
+    if (current_operation_ != Operation::NO_OPERATION && input_number_.isEmpty()) {
+        input_number_ = "";
+    }
+
+    if (input_number_.startsWith("0") && !input_number_.contains(kDot) && input_number_.length() == 1) {
+        input_number_.clear();
     }
 
     input_number_ += QString::number(n);
@@ -211,12 +223,13 @@ void MainWindow::Calculate() {
 }
 
 void MainWindow::ProcessOperation(Operation operation) {
-    if (current_operation_ == Operation::NO_OPERATION) {
+    if (current_operation_ != Operation::NO_OPERATION) {
+        Calculate();
+    } else {
         calculator_.Set(active_number_);
     }
-
     current_operation_ = operation;
-    ui->l_formula->setText(QString::number(active_number_) + " " + GetOperationSymbol(operation) + " ");
+    ui->l_formula->setText(QString::number(calculator_.GetNumber()) + " " + GetOperationSymbol(operation) + " ");
     input_number_ = "";
 }
 
