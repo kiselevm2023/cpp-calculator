@@ -424,7 +424,7 @@ clean: debug-clean release-clean  FORCE
 	-$(DEL_FILE) tests.idb
 distclean: debug-distclean release-distclean  FORCE
 	-$(DEL_FILE) Makefile
-	-$(DEL_FILE) "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint2\final-task\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\tests\target_wrapper.bat" tests.pdb
+	-$(DEL_FILE) "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\build\Desktop_Qt_6_5_3_MSVC2019_64bit-Debug\tests\target_wrapper.bat" tests.pdb
 
 debug-check:
 	@set MAKEFLAGS=$(MAKEFLAGS)

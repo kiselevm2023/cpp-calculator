@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -27,6 +28,9 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
+    QHBoxLayout *horizontalLayout;
+    QLabel *l_memory;
+    QLabel *l_result;
     QHBoxLayout *horizontalLayout_2;
     QGridLayout *gridLayout_2;
     QPushButton *btn_5;
@@ -44,7 +48,7 @@ public:
     QPushButton *btn_c;
     QPushButton *btn_6;
     QPushButton *btn_3;
-    QPushButton *btn_dot;
+    QPushButton *tb_extra;
     QPushButton *btn_4;
     QSpacerItem *horizontalSpacer_2;
     QVBoxLayout *verticalLayout;
@@ -54,16 +58,15 @@ public:
     QPushButton *btn_sub;
     QPushButton *btn_add;
     QPushButton *btn_res;
-    QHBoxLayout *horizontalLayout;
-    QLabel *l_memory;
-    QLabel *l_result;
+    QHBoxLayout *horizontalLayout_3;
+    QComboBox *cmb_controller;
     QLabel *l_formula;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(310, 362);
+        MainWindow->resize(283, 436);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -76,6 +79,21 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName("gridLayout");
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        l_memory = new QLabel(centralwidget);
+        l_memory->setObjectName("l_memory");
+
+        horizontalLayout->addWidget(l_memory);
+
+        l_result = new QLabel(centralwidget);
+        l_result->setObjectName("l_result");
+
+        horizontalLayout->addWidget(l_result, 0, Qt::AlignmentFlag::AlignRight);
+
+
+        gridLayout->addLayout(horizontalLayout, 2, 0, 1, 1);
+
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         gridLayout_2 = new QGridLayout();
@@ -155,10 +173,10 @@ public:
 
         gridLayout_2->addWidget(btn_3, 4, 2, 1, 1);
 
-        btn_dot = new QPushButton(centralwidget);
-        btn_dot->setObjectName("btn_dot");
+        tb_extra = new QPushButton(centralwidget);
+        tb_extra->setObjectName("tb_extra");
 
-        gridLayout_2->addWidget(btn_dot, 5, 0, 1, 1);
+        gridLayout_2->addWidget(tb_extra, 5, 0, 1, 1);
 
         btn_4 = new QPushButton(centralwidget);
         btn_4->setObjectName("btn_4");
@@ -208,27 +226,22 @@ public:
         horizontalLayout_2->addLayout(verticalLayout);
 
 
-        gridLayout->addLayout(horizontalLayout_2, 2, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout_2, 3, 0, 1, 1);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        l_memory = new QLabel(centralwidget);
-        l_memory->setObjectName("l_memory");
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        cmb_controller = new QComboBox(centralwidget);
+        cmb_controller->setObjectName("cmb_controller");
 
-        horizontalLayout->addWidget(l_memory);
-
-        l_result = new QLabel(centralwidget);
-        l_result->setObjectName("l_result");
-
-        horizontalLayout->addWidget(l_result, 0, Qt::AlignmentFlag::AlignRight);
-
-
-        gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
+        horizontalLayout_3->addWidget(cmb_controller, 0, Qt::AlignmentFlag::AlignLeft);
 
         l_formula = new QLabel(centralwidget);
         l_formula->setObjectName("l_formula");
 
-        gridLayout->addWidget(l_formula, 0, 0, 1, 1, Qt::AlignmentFlag::AlignRight);
+        horizontalLayout_3->addWidget(l_formula, 0, Qt::AlignmentFlag::AlignRight);
+
+
+        gridLayout->addLayout(horizontalLayout_3, 1, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
 
@@ -240,6 +253,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\320\232\320\260\320\273\321\214\320\272\321\203\320\273\321\217\321\202\320\276\321\200", nullptr));
+        l_memory->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        l_result->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         btn_5->setText(QCoreApplication::translate("MainWindow", "5", nullptr));
         btn_9->setText(QCoreApplication::translate("MainWindow", "9", nullptr));
         btn_1->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
@@ -255,7 +270,7 @@ public:
         btn_c->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
         btn_6->setText(QCoreApplication::translate("MainWindow", "6", nullptr));
         btn_3->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
-        btn_dot->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
+        tb_extra->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
         btn_4->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
         btn_pow->setText(QCoreApplication::translate("MainWindow", "x\312\270", nullptr));
         btn_div->setText(QCoreApplication::translate("MainWindow", "\303\267", nullptr));
@@ -263,8 +278,6 @@ public:
         btn_sub->setText(QCoreApplication::translate("MainWindow", "\342\210\222", nullptr));
         btn_add->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         btn_res->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
-        l_memory->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        l_result->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         l_formula->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
