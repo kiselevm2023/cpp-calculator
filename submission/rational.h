@@ -126,46 +126,26 @@ inline Rational Rational::operator-() const {
 }
 
 inline Rational operator+(const Rational& l, const Rational& r) {
-    Rational result;
-
-    const int lcm = std::lcm(l.GetDenominator(), r.GetDenominator());
-    result.numerator_ = (lcm / l.GetDenominator() * l.GetNumerator()) +
-                        (lcm / r.GetDenominator() * r.GetNumerator());
-    result.denominator_ = lcm;
-
-    result.Reduction();
+    Rational result = l;
+    result += r;
     return result;
 }
 
 inline Rational operator-(const Rational& l, const Rational& r) {
-    Rational result;
-
-    const int lcm = std::lcm(l.GetDenominator(), r.GetDenominator());
-    result.numerator_ = (lcm / l.GetDenominator() * l.GetNumerator()) -
-                        (lcm / r.GetDenominator() * r.GetNumerator());
-    result.denominator_ = lcm;
-
-    result.Reduction();
+    Rational result = l;
+    result -= r;
     return result;
 }
 
 inline Rational operator*(const Rational& l, const Rational& r) {
-    Rational result;
-
-    result.numerator_ = l.GetNumerator() * r.GetNumerator();
-    result.denominator_ = l.GetDenominator() * r.GetDenominator();
-    result.Reduction();
-
+    Rational result = l;
+    result *= r;
     return result;
 }
 
 inline Rational operator/(const Rational& l, const Rational& r) {
-    Rational result;
-
-    result.numerator_ = l.GetNumerator() * r.GetDenominator();
-    result.denominator_ = l.GetDenominator() * r.GetNumerator();
-    result.Reduction();
-
+    Rational result = l;
+    result /= r;
     return result;
 }
 

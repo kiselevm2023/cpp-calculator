@@ -41,70 +41,70 @@ SUBTARGETS    =  \
 
 sub-submission-qmake_all:  FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
-	cd submission\ && $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
+	cd submission\ && $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd submission\ && $(MAKE) -f Makefile qmake_all
 sub-submission: $(MAKEFILE) FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
 sub-submission-make_first: FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
 sub-submission-all: FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
 sub-submission-clean: FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
 sub-submission-distclean: FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
 sub-submission-install_subtargets: FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
 sub-submission-uninstall_subtargets: FORCE
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 sub-tests-qmake_all:  FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
-	cd tests\ && $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
+	cd tests\ && $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd tests\ && $(MAKE) -f Makefile qmake_all
 sub-tests: $(MAKEFILE) FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
 sub-tests-make_first: FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
 sub-tests-all: FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
 sub-tests-clean: FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
 sub-tests-distclean: FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
 sub-tests-install_subtargets: FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
 sub-tests-uninstall_subtargets: FORCE
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 
 Makefile: ..\..\final-task.pro C:\Qt\6.5.3\msvc2019_64\mkspecs\win32-msvc\qmake.conf C:\Qt\6.5.3\msvc2019_64\mkspecs\features\spec_pre.prf \
 		C:\Qt\6.5.3\msvc2019_64\mkspecs\common\windows-desktop.conf \
@@ -414,41 +414,41 @@ uninstall_subtargets: sub-submission-uninstall_subtargets sub-tests-uninstall_su
 sub-submission-debug:
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
 sub-tests-debug:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
 debug: sub-submission-debug sub-tests-debug
 
 sub-submission-release:
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
 sub-tests-release:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
 release: sub-submission-release sub-tests-release
 
 sub-submission-check:
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
 sub-tests-check:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
 check: sub-submission-check sub-tests-check
 
 sub-submission-benchmark:
 	@if not exist submission\ mkdir submission\ & if not exist submission\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
+	cd submission\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\submission\submission.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
 sub-tests-benchmark:
 	@if not exist tests\ mkdir tests\ & if not exist tests\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-qt\problems\sprint3\template-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
+	cd tests\ && ( if not exist Makefile $(QMAKE) -o Makefile "C:\Users\Maksim Kiselev\cpp-calculator\tests\tests.pro" -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
 benchmark: sub-submission-benchmark sub-tests-benchmark
 install:install_subtargets  FORCE
 
